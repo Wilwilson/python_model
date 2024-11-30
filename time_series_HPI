@@ -1,0 +1,23 @@
+Introduction - Time Series Model for Housing Price Index
+
+Predicting housing prices is a crucial aspect of economic analysis and decision-making, given its significance for policymakers, investors, and individuals. 
+Housing prices reflect the broader economic climate, including interest rates, employment conditions, and consumer confidence. Accurate predictions of housing price movements enable individuals to make informed home-buying or selling choices.
+
+In this context, time series modeling offers a robust framework for forecasting housing prices with follow benefits,
+
+Unlike traditional regression models that assume independence among observations
+Time series models are explicitly designed to account for temporal dependencies within data
+Time series can capture patterns such as trends, seasonality, and autocorrelation, which are often present in housing prices
+Time series analysis allows us to incorporate lagged effects, reflecting how past housing prices influence current and future market behavior
+For this study, we aim to leverage advanced time series modeling techniques, including ARIMA and its variants, to forecast the Canadian Housing Price Index (HPI). 
+The HPI serves as a reliable measure of changes in the price of residential properties over time. Using historical data, our model incorporates both short-term dynamics and long-term trends to generate accurate and actionable predictions.
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from statsmodels.tsa.stattools import adfuller, acf, pacf
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from statsmodels.tsa.arima.model import ARIMA
+from sklearn.metrics import mean_squared_error
+
